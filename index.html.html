@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+    <body>
+    <title>covid 19</title>
+</head>
+<style>
+
+
+
+
+/* creating css loader */
+
+#loading {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+.myChartDiv {
+  
+  max-width: 1200px;
+  max-height: 500px;
+display: block;
+margin: 0 auto;
+  
+}
+body{
+    background-color: rgba(91, 200, 18, 0.534);
+}
+
+
+</style>
+<body>
+
+    
+
+    <div class="container">
+        <h1> <img src="./covimg.png" alt="" width="150px"> Covid-19 Tracker</h1>
+            <select id="searchcountry" class="form-control mt-5" style="max-width:50%;">
+            <option value="" disabled selected>search for country</option>
+            </select>
+            
+            
+        <br>
+
+        
+        <div id="loading"></div>
+        <div id="result" class="d-lg-inline-flex m-1"> </div>
+        <div class="myChartDiv text-center">
+            <canvas id="myChart" width="0" height="600"></canvas>
+        </div>
+               
+        
+
+    </div>
+   
+    
+</body>
+<script src="./loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</html>
