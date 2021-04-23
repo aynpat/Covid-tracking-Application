@@ -39,7 +39,7 @@ function hideLoading() {
 
 window.onload = (event) => {
   console.log('page is fully loaded');
-  
+  document.getElementById("myChart").style.display = "none"; 
   fetch('https://api.covid19api.com/summary')
   .then(response => response.json())
   .then(json => {
@@ -161,6 +161,7 @@ let TotalRecovered = json.Global.TotalRecovered;
         countryname.addEventListener('change',()=>{
        let getname = country = document.getElementById('searchcountry').value;
        document.getElementById("myChartglobal").style.display = "none"; 
+       document.getElementById("myChart").style.display = "block"; 
           displayLoading();
           sendPostRequest(getname); 
          getdata(getname);
