@@ -36,10 +36,11 @@ function displayLoading() {
 function hideLoading() {
     loader.classList.remove("display");
 }
- 
-//global value
 
-fetch('https://api.covid19api.com/summary')
+window.onload = (event) => {
+  console.log('page is fully loaded');
+  
+  fetch('https://api.covid19api.com/summary')
   .then(response => response.json())
   .then(json => {
 
@@ -103,7 +104,7 @@ let NewConfirmed = json.Global.NewConfirmed;
 let TotalDeaths = json.Global.TotalDeaths;
 let TotalRecovered = json.Global.TotalRecovered;
 
-      let ctx = document.getElementById("myChart").getContext('2d');
+      let ctx = document.getElementById("myChartglobal").getContext('2d');
       let myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -112,10 +113,10 @@ let TotalRecovered = json.Global.TotalRecovered;
                 label:['Total'] ,
                 data: [TotalConfirmed, NewConfirmed, TotalDeaths, TotalRecovered],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)'
+                    'rgba(255, 99, 132, 5)',
+                    'rgba(54, 162, 235, 5)',
+                    'rgba(255, 206, 86, 5)',
+                    'rgba(75, 192, 192, 5)'
                     
                 ],
                 borderColor: [
@@ -136,6 +137,11 @@ let TotalRecovered = json.Global.TotalRecovered;
         }
     });
   })
+};
+ 
+///////////////////Global Chart///////////////////////////////
+
+
 
 
 
@@ -148,7 +154,7 @@ let TotalRecovered = json.Global.TotalRecovered;
   let country = document.getElementById('searchcountry').value; 
         countryname.addEventListener('change',()=>{
        let getname = country = document.getElementById('searchcountry').value;
-          
+       document.getElementById("myChartglobal").style.display = "none"; 
           displayLoading();
           sendPostRequest(getname); 
          getdata(getname);
