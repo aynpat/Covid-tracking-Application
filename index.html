@@ -71,19 +71,20 @@ margin: 0 auto;
     
 
     <div class="container">
-            <h1  class="text-light">
-                <img src="./covimg.png" alt="" width="150px">Covid-19 Tracker
-            </h1>
-            <select id="searchcountry" class="form-control mt-5" style="max-width:50%;">
+            <div  class=" text-center text-light">
+                <a href="https://kobed.netlify.app/"><img src="./covimg.png" alt="" width="150px"></a> 
+               <h1>Covid-19 Tracker</h1> 
+            </div>
+            <select id="searchcountry" class="form-control mt-5" style="max-width:auto;">
                 <option value="" disabled selected>search for country</option>
             </select>
             
             
         
-
+            <br>
         
         <div id="loading"></div>
-        <div id="result" class="d-lg-inline-flex m-1"> </div>
+        <div id="result" class="d-lg-inline-flex ml-lg-5"> </div>
 
         <div class="myChartDiv text-center">
             <canvas id="myChartglobal" width="0" height="600"></canvas>

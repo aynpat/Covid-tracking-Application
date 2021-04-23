@@ -51,7 +51,7 @@ window.onload = (event) => {
       <p class="text-center b">Date:</p>
     </div>
 
-    <div class="card text-center  text-dark  mx-2">
+    <div class="card text-center  text-dark  mx-2 mb-2">
    
     <div class="card-body">
     <h3>${json.Global.TotalConfirmed}</h3>
@@ -63,7 +63,7 @@ window.onload = (event) => {
   </div>
      
 
-  <div class="card text-center  text-dark mx-2">
+  <div class="card text-center  text-dark mx-2 mb-2">
    
   <div class="card-body">
   <h3>${json.Global.NewConfirmed}</h3>
@@ -75,7 +75,7 @@ window.onload = (event) => {
 </div>
 
 
-<div class="card text-center  text-dark mx-2">
+<div class="card text-center  text-dark mx-2 mb-2">
    
 <div class="card-body">
 <h3>${json.Global.TotalDeaths}</h3>
@@ -88,7 +88,7 @@ window.onload = (event) => {
   
 
 
-<div class="card text-center text-dark mx-2">
+<div class="card text-center text-dark mx-2 mb-2">
    
 <div class="card-body">
 <h3>${json.Global.TotalRecovered}</h3>
@@ -189,10 +189,10 @@ let TotalRecovered = json.Global.TotalRecovered;
             result.innerHTML = `
           <div class="m-0 py-5 text-center"><span class="h1">${data[index].Country}</span></div>
 
-          <div class="card text-center  text-dark  mx-2">
+          <div class="card text-center  text-dark  mx-2  mb-3">
          
           <div class="card-body">
-          <h3>${data[index].Confirmed}</h3>
+          <h2 class="text-white">${data[index].Confirmed}</h2>
           <span class="text-center">Total Confirmed Cases :</span>
           </div>
           <div class="card-footer text-muted bg-danger  p-1">
@@ -201,7 +201,7 @@ let TotalRecovered = json.Global.TotalRecovered;
         </div>
            
 
-        <div class="card text-center  text-dark mx-2">
+        <div class="card text-center  text-dark mx-2  mb-3">
          
         <div class="card-body">
         <h3>${data[index].Active}</h3>
@@ -213,7 +213,7 @@ let TotalRecovered = json.Global.TotalRecovered;
       </div>
 
 
-      <div class="card text-center  text-dark mx-2">
+      <div class="card text-center  text-dark mx-2  mb-3">
          
       <div class="card-body">
       <h3>${data[index].Deaths}</h3>
@@ -226,7 +226,7 @@ let TotalRecovered = json.Global.TotalRecovered;
         
 
       
-    <div class="card text-center text-dark mx-2">
+    <div class="card text-center text-dark mx-2  mb-3">
          
     <div class="card-body">
     <h3>${data[index].Recovered}</h3>
