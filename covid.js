@@ -45,7 +45,7 @@ window.onload = (event) => {
   .then(json => {
 
     result.innerHTML = `
-    <div class="m-0 py-5 text-center"><span class="h1">Total Global Cases</span>
+    <div class="m-0 py-1 text-center"><span class="h1">Total Global Cases</span>
       
       <p>${json.Global.Date}</p>
       <p class="text-center b">Date:</p>
