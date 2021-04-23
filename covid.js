@@ -130,15 +130,23 @@ let TotalRecovered = json.Global.TotalRecovered;
             }]
         },
         options: {
+          legend:{
+            labels:{
+              fontColor: '#ffffff'
+            }
+          },
             scales: {
-                y: {
+                yAxes: {
                   ticks: {
                     fontColor: "yellow",
-                    fontSize: 14,
-                  
+                   
                     beginAtZero: true
                 }
-                }
+                },   xAxes: [{
+                  ticks: {
+                      fontColor: 'ffffff'
+                  },
+              }]
             }
         }
     });
@@ -309,7 +317,7 @@ datasets: [{
    label: "Confirmed",
   
    data: values,
-   borderWidth: 2,
+   borderWidth: 3,
    backgroundColor: "rgba(6, 167, 125, 0.1)",
    borderColor: "rgba(6, 167, 125, 1)",
    pointBackgroundColor: "rgba(225, 225, 225, 1)",
@@ -321,7 +329,7 @@ datasets: [{
    label: "Active",
    
    data: Active,
-   borderWidth: 2,
+   borderWidth: 3,
    backgroundColor: "rgba(26, 143, 227, 0.1)",
    borderColor: "rgba(26, 143, 227, 1)",
    pointBackgroundColor: "rgba(225, 225, 225, 1)",
@@ -332,7 +340,7 @@ datasets: [{
   label: "Deaths",
   
   data: Deaths,
-  borderWidth: 2,
+  borderWidth: 3,
   backgroundColor: "rgba(255, 50, 71,0.1)",
   borderColor: "rgba(255, 50, 71, 1)",
   pointBackgroundColor: "rgba(255, 50, 71, 1)",
@@ -346,6 +354,11 @@ options: { elements: {
       radius: 0
   }
 },
+legend:{
+  labels:{
+    fontColor: '#ffffff'
+  }
+},
 responsive: true, // Instruct chart JS to respond nicely.
 maintainAspectRatio: true, // Add to prevent default behavior of full-width/height 
 scales: {
@@ -353,16 +366,20 @@ scales: {
   yAxes: [{
     label: chartTitle,
     ticks: {
+      fontColor: '#ffffff',
         beginAtZero: true
     }
   }], xAxes: [ {
+    ticks: {
+      fontColor: '#ffffff'
+    },
     display: true,
     type: 'time',
     time: {
       parser: 'YYYY-MM-DD',
       tooltipFormat: 'YYYY-MM-DD',
       unit: 'month',
-      unitStepSize: 1,
+      unitStepSize: 2,
       displayFormats: {
         'month': 'YYYY-MM-DD'
       }
