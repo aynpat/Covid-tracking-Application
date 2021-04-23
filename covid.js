@@ -45,9 +45,9 @@ window.onload = (event) => {
   .then(json => {
 
     result.innerHTML = `
-    <div class="m-0 py-1 text-center"><span class="h1">Total Global Cases</span>
+    <div class="m-0 py-1 text-center"><span class="h1 text-light">Total Global Cases</span>
       
-      <p>${json.Global.Date}</p>
+      <p class="text-light">${json.Global.Date}</p>
       <p class="text-center b">Date:</p>
     </div>
 
@@ -107,6 +107,7 @@ let TotalRecovered = json.Global.TotalRecovered;
       let ctx = document.getElementById("myChartglobal").getContext('2d');
       let myChart = new Chart(ctx, {
         type: 'bar',
+        
         data: {
             labels: ['TotalConfirmed', 'NewConfirmed', 'TotalDeaths', 'TotalRecovered'],
             datasets: [{
@@ -131,7 +132,12 @@ let TotalRecovered = json.Global.TotalRecovered;
         options: {
             scales: {
                 y: {
+                  ticks: {
+                    fontColor: "yellow",
+                    fontSize: 14,
+                  
                     beginAtZero: true
+                }
                 }
             }
         }
