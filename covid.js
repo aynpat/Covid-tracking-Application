@@ -201,7 +201,7 @@ let TotalRecovered = json.Global.TotalRecovered;
           <div class="card text-center  text-dark  mx-2  mb-3">
          
           <div class="card-body">
-          <h2 >${data[index].Confirmed}</h2>
+          <h3>${data[index].Confirmed}</h3>
           <span class="text-center">Total Confirmed Cases :</span>
           </div>
           <div class="card-footer text-muted bg-danger  p-1">
