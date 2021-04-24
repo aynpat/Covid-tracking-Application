@@ -378,11 +378,8 @@ scales: {
     time: {
       parser: 'YYYY-MM-DD',
       tooltipFormat: 'YYYY-MM-DD',
-      unit: 'month',
-      unitStepSize: 2,
-      displayFormats: {
-        'month': 'YYYY-MM-DD'
-      }
+      unit: 'month'
+     
     }
   }
 ],
